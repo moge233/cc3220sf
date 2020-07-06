@@ -5,7 +5,7 @@ authors = ["matt"]
 edition = "2018"
 description = "Peripheral access crate for the Texas Instruments CC3220SF"
 keywords = ["svd2rust", "cortex-m", "arm", "cc3220sf", "TI"]
-license = "GPLv3"
+license = "GPL-3.0"
 repository = "https://github.com/moge233/cc3220sf"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
