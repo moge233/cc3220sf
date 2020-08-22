@@ -1,242 +1,242 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - DR"]
-    pub dr: DR,
-    #[doc = "0x04 - RSR_ECR"]
-    pub rsr_ecr: RSR_ECR,
+    #[doc = "0x00 - UART data register"]
+    pub uartdr: UARTDR,
+    #[doc = "0x04 - UART receive status register/error clear register"]
+    pub uartrsr_uartecr: UARTRSR_UARTECR,
     _reserved2: [u8; 16usize],
-    #[doc = "0x18 - FR"]
-    pub fr: FR,
+    #[doc = "0x18 - UART flag register"]
+    pub uartfr: UARTFR,
     _reserved3: [u8; 4usize],
-    #[doc = "0x20 - ILPR"]
-    pub ilpr: ILPR,
-    #[doc = "0x24 - IBRD"]
-    pub ibrd: IBRD,
-    #[doc = "0x28 - FBRD"]
-    pub fbrd: FBRD,
-    #[doc = "0x2c - LCRH"]
-    pub lcrh: LCRH,
-    #[doc = "0x30 - CTL"]
-    pub ctl: CTL,
-    #[doc = "0x34 - IFLS"]
-    pub ifls: IFLS,
-    #[doc = "0x38 - IM"]
-    pub im: IM,
-    #[doc = "0x3c - RIS"]
-    pub ris: RIS,
-    #[doc = "0x40 - MIS"]
-    pub mis: MIS,
-    #[doc = "0x44 - ICR"]
-    pub icr: ICR,
-    #[doc = "0x48 - DMACTL"]
-    pub dmactl: DMACTL,
+    #[doc = "0x20 - UARTILPR"]
+    pub uartilpr: UARTILPR,
+    #[doc = "0x24 - UART integer part of the baud-rate divisor value"]
+    pub uartibrd: UARTIBRD,
+    #[doc = "0x28 - UART fractional part of the baud-rate divisor value"]
+    pub uartfbrd: UARTFBRD,
+    #[doc = "0x2c - UART line control register"]
+    pub uartlcrh: UARTLCRH,
+    #[doc = "0x30 - UARTCTL"]
+    pub uartctl: UARTCTL,
+    #[doc = "0x34 - UART interrupt FIFO level select"]
+    pub uartifls: UARTIFLS,
+    #[doc = "0x38 - UART interrupt mask register"]
+    pub uartim: UARTIM,
+    #[doc = "0x3c - UART raw interrupt status register"]
+    pub uartris: UARTRIS,
+    #[doc = "0x40 - UART masked interrupt status register"]
+    pub uartmis: UARTMIS,
+    #[doc = "0x44 - UART interrupt clear register"]
+    pub uarticr: UARTICR,
+    #[doc = "0x48 - UART DMA control register"]
+    pub uartdmactl: UARTDMACTL,
     _reserved14: [u8; 68usize],
-    #[doc = "0x90 - LCTL"]
-    pub lctl: LCTL,
-    #[doc = "0x94 - LSS"]
-    pub lss: LSS,
-    #[doc = "0x98 - LTIM"]
-    pub ltim: LTIM,
+    #[doc = "0x90 - UARTLCTL"]
+    pub uartlctl: UARTLCTL,
+    #[doc = "0x94 - UARTLSS"]
+    pub uartlss: UARTLSS,
+    #[doc = "0x98 - UARTLTIM"]
+    pub uartltim: UARTLTIM,
     _reserved17: [u8; 8usize],
     #[doc = "0xa4 - UART_9BITADDR"]
     pub uart_9bitaddr: UART_9BITADDR,
     #[doc = "0xa8 - UART_9BITAMASK"]
     pub uart_9bitamask: UART_9BITAMASK,
     _reserved19: [u8; 3860usize],
-    #[doc = "0xfc0 - PP"]
-    pub pp: PP,
+    #[doc = "0xfc0 - UARTPP"]
+    pub uartpp: UARTPP,
     _reserved20: [u8; 4usize],
-    #[doc = "0xfc8 - CC"]
-    pub cc: CC,
+    #[doc = "0xfc8 - UARTCC"]
+    pub uartcc: UARTCC,
 }
-#[doc = "DR\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dr](dr) module"]
-pub type DR = crate::Reg<u32, _DR>;
+#[doc = "UART data register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartdr](uartdr) module"]
+pub type UARTDR = crate::Reg<u32, _UARTDR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
-pub struct _DR;
-#[doc = "`read()` method returns [dr::R](dr::R) reader structure"]
-impl crate::Readable for DR {}
-#[doc = "`write(|w| ..)` method takes [dr::W](dr::W) writer structure"]
-impl crate::Writable for DR {}
-#[doc = "DR"]
-pub mod dr;
-#[doc = "RSR_ECR\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rsr_ecr](rsr_ecr) module"]
-pub type RSR_ECR = crate::Reg<u32, _RSR_ECR>;
+pub struct _UARTDR;
+#[doc = "`read()` method returns [uartdr::R](uartdr::R) reader structure"]
+impl crate::Readable for UARTDR {}
+#[doc = "`write(|w| ..)` method takes [uartdr::W](uartdr::W) writer structure"]
+impl crate::Writable for UARTDR {}
+#[doc = "UART data register"]
+pub mod uartdr;
+#[doc = "UART receive status register/error clear register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartrsr_uartecr](uartrsr_uartecr) module"]
+pub type UARTRSR_UARTECR = crate::Reg<u32, _UARTRSR_UARTECR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
-pub struct _RSR_ECR;
-#[doc = "`read()` method returns [rsr_ecr::R](rsr_ecr::R) reader structure"]
-impl crate::Readable for RSR_ECR {}
-#[doc = "`write(|w| ..)` method takes [rsr_ecr::W](rsr_ecr::W) writer structure"]
-impl crate::Writable for RSR_ECR {}
-#[doc = "RSR_ECR"]
-pub mod rsr_ecr;
-#[doc = "FR\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fr](fr) module"]
-pub type FR = crate::Reg<u32, _FR>;
+pub struct _UARTRSR_UARTECR;
+#[doc = "`read()` method returns [uartrsr_uartecr::R](uartrsr_uartecr::R) reader structure"]
+impl crate::Readable for UARTRSR_UARTECR {}
+#[doc = "`write(|w| ..)` method takes [uartrsr_uartecr::W](uartrsr_uartecr::W) writer structure"]
+impl crate::Writable for UARTRSR_UARTECR {}
+#[doc = "UART receive status register/error clear register"]
+pub mod uartrsr_uartecr;
+#[doc = "UART flag register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartfr](uartfr) module"]
+pub type UARTFR = crate::Reg<u32, _UARTFR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
-pub struct _FR;
-#[doc = "`read()` method returns [fr::R](fr::R) reader structure"]
-impl crate::Readable for FR {}
-#[doc = "`write(|w| ..)` method takes [fr::W](fr::W) writer structure"]
-impl crate::Writable for FR {}
-#[doc = "FR"]
-pub mod fr;
-#[doc = "ILPR\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ilpr](ilpr) module"]
-pub type ILPR = crate::Reg<u32, _ILPR>;
+pub struct _UARTFR;
+#[doc = "`read()` method returns [uartfr::R](uartfr::R) reader structure"]
+impl crate::Readable for UARTFR {}
+#[doc = "`write(|w| ..)` method takes [uartfr::W](uartfr::W) writer structure"]
+impl crate::Writable for UARTFR {}
+#[doc = "UART flag register"]
+pub mod uartfr;
+#[doc = "UARTILPR\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartilpr](uartilpr) module"]
+pub type UARTILPR = crate::Reg<u32, _UARTILPR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
-pub struct _ILPR;
-#[doc = "`read()` method returns [ilpr::R](ilpr::R) reader structure"]
-impl crate::Readable for ILPR {}
-#[doc = "`write(|w| ..)` method takes [ilpr::W](ilpr::W) writer structure"]
-impl crate::Writable for ILPR {}
-#[doc = "ILPR"]
-pub mod ilpr;
-#[doc = "IBRD\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ibrd](ibrd) module"]
-pub type IBRD = crate::Reg<u32, _IBRD>;
+pub struct _UARTILPR;
+#[doc = "`read()` method returns [uartilpr::R](uartilpr::R) reader structure"]
+impl crate::Readable for UARTILPR {}
+#[doc = "`write(|w| ..)` method takes [uartilpr::W](uartilpr::W) writer structure"]
+impl crate::Writable for UARTILPR {}
+#[doc = "UARTILPR"]
+pub mod uartilpr;
+#[doc = "UART integer part of the baud-rate divisor value\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartibrd](uartibrd) module"]
+pub type UARTIBRD = crate::Reg<u32, _UARTIBRD>;
 #[allow(missing_docs)]
 #[doc(hidden)]
-pub struct _IBRD;
-#[doc = "`read()` method returns [ibrd::R](ibrd::R) reader structure"]
-impl crate::Readable for IBRD {}
-#[doc = "`write(|w| ..)` method takes [ibrd::W](ibrd::W) writer structure"]
-impl crate::Writable for IBRD {}
-#[doc = "IBRD"]
-pub mod ibrd;
-#[doc = "FBRD\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fbrd](fbrd) module"]
-pub type FBRD = crate::Reg<u32, _FBRD>;
+pub struct _UARTIBRD;
+#[doc = "`read()` method returns [uartibrd::R](uartibrd::R) reader structure"]
+impl crate::Readable for UARTIBRD {}
+#[doc = "`write(|w| ..)` method takes [uartibrd::W](uartibrd::W) writer structure"]
+impl crate::Writable for UARTIBRD {}
+#[doc = "UART integer part of the baud-rate divisor value"]
+pub mod uartibrd;
+#[doc = "UART fractional part of the baud-rate divisor value\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartfbrd](uartfbrd) module"]
+pub type UARTFBRD = crate::Reg<u32, _UARTFBRD>;
 #[allow(missing_docs)]
 #[doc(hidden)]
-pub struct _FBRD;
-#[doc = "`read()` method returns [fbrd::R](fbrd::R) reader structure"]
-impl crate::Readable for FBRD {}
-#[doc = "`write(|w| ..)` method takes [fbrd::W](fbrd::W) writer structure"]
-impl crate::Writable for FBRD {}
-#[doc = "FBRD"]
-pub mod fbrd;
-#[doc = "LCRH\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lcrh](lcrh) module"]
-pub type LCRH = crate::Reg<u32, _LCRH>;
+pub struct _UARTFBRD;
+#[doc = "`read()` method returns [uartfbrd::R](uartfbrd::R) reader structure"]
+impl crate::Readable for UARTFBRD {}
+#[doc = "`write(|w| ..)` method takes [uartfbrd::W](uartfbrd::W) writer structure"]
+impl crate::Writable for UARTFBRD {}
+#[doc = "UART fractional part of the baud-rate divisor value"]
+pub mod uartfbrd;
+#[doc = "UART line control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartlcrh](uartlcrh) module"]
+pub type UARTLCRH = crate::Reg<u32, _UARTLCRH>;
 #[allow(missing_docs)]
 #[doc(hidden)]
-pub struct _LCRH;
-#[doc = "`read()` method returns [lcrh::R](lcrh::R) reader structure"]
-impl crate::Readable for LCRH {}
-#[doc = "`write(|w| ..)` method takes [lcrh::W](lcrh::W) writer structure"]
-impl crate::Writable for LCRH {}
-#[doc = "LCRH"]
-pub mod lcrh;
-#[doc = "CTL\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctl](ctl) module"]
-pub type CTL = crate::Reg<u32, _CTL>;
+pub struct _UARTLCRH;
+#[doc = "`read()` method returns [uartlcrh::R](uartlcrh::R) reader structure"]
+impl crate::Readable for UARTLCRH {}
+#[doc = "`write(|w| ..)` method takes [uartlcrh::W](uartlcrh::W) writer structure"]
+impl crate::Writable for UARTLCRH {}
+#[doc = "UART line control register"]
+pub mod uartlcrh;
+#[doc = "UARTCTL\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartctl](uartctl) module"]
+pub type UARTCTL = crate::Reg<u32, _UARTCTL>;
 #[allow(missing_docs)]
 #[doc(hidden)]
-pub struct _CTL;
-#[doc = "`read()` method returns [ctl::R](ctl::R) reader structure"]
-impl crate::Readable for CTL {}
-#[doc = "`write(|w| ..)` method takes [ctl::W](ctl::W) writer structure"]
-impl crate::Writable for CTL {}
-#[doc = "CTL"]
-pub mod ctl;
-#[doc = "IFLS\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ifls](ifls) module"]
-pub type IFLS = crate::Reg<u32, _IFLS>;
+pub struct _UARTCTL;
+#[doc = "`read()` method returns [uartctl::R](uartctl::R) reader structure"]
+impl crate::Readable for UARTCTL {}
+#[doc = "`write(|w| ..)` method takes [uartctl::W](uartctl::W) writer structure"]
+impl crate::Writable for UARTCTL {}
+#[doc = "UARTCTL"]
+pub mod uartctl;
+#[doc = "UART interrupt FIFO level select\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartifls](uartifls) module"]
+pub type UARTIFLS = crate::Reg<u32, _UARTIFLS>;
 #[allow(missing_docs)]
 #[doc(hidden)]
-pub struct _IFLS;
-#[doc = "`read()` method returns [ifls::R](ifls::R) reader structure"]
-impl crate::Readable for IFLS {}
-#[doc = "`write(|w| ..)` method takes [ifls::W](ifls::W) writer structure"]
-impl crate::Writable for IFLS {}
-#[doc = "IFLS"]
-pub mod ifls;
-#[doc = "IM\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [im](im) module"]
-pub type IM = crate::Reg<u32, _IM>;
+pub struct _UARTIFLS;
+#[doc = "`read()` method returns [uartifls::R](uartifls::R) reader structure"]
+impl crate::Readable for UARTIFLS {}
+#[doc = "`write(|w| ..)` method takes [uartifls::W](uartifls::W) writer structure"]
+impl crate::Writable for UARTIFLS {}
+#[doc = "UART interrupt FIFO level select"]
+pub mod uartifls;
+#[doc = "UART interrupt mask register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartim](uartim) module"]
+pub type UARTIM = crate::Reg<u32, _UARTIM>;
 #[allow(missing_docs)]
 #[doc(hidden)]
-pub struct _IM;
-#[doc = "`read()` method returns [im::R](im::R) reader structure"]
-impl crate::Readable for IM {}
-#[doc = "`write(|w| ..)` method takes [im::W](im::W) writer structure"]
-impl crate::Writable for IM {}
-#[doc = "IM"]
-pub mod im;
-#[doc = "RIS\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ris](ris) module"]
-pub type RIS = crate::Reg<u32, _RIS>;
+pub struct _UARTIM;
+#[doc = "`read()` method returns [uartim::R](uartim::R) reader structure"]
+impl crate::Readable for UARTIM {}
+#[doc = "`write(|w| ..)` method takes [uartim::W](uartim::W) writer structure"]
+impl crate::Writable for UARTIM {}
+#[doc = "UART interrupt mask register"]
+pub mod uartim;
+#[doc = "UART raw interrupt status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartris](uartris) module"]
+pub type UARTRIS = crate::Reg<u32, _UARTRIS>;
 #[allow(missing_docs)]
 #[doc(hidden)]
-pub struct _RIS;
-#[doc = "`read()` method returns [ris::R](ris::R) reader structure"]
-impl crate::Readable for RIS {}
-#[doc = "`write(|w| ..)` method takes [ris::W](ris::W) writer structure"]
-impl crate::Writable for RIS {}
-#[doc = "RIS"]
-pub mod ris;
-#[doc = "MIS\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mis](mis) module"]
-pub type MIS = crate::Reg<u32, _MIS>;
+pub struct _UARTRIS;
+#[doc = "`read()` method returns [uartris::R](uartris::R) reader structure"]
+impl crate::Readable for UARTRIS {}
+#[doc = "`write(|w| ..)` method takes [uartris::W](uartris::W) writer structure"]
+impl crate::Writable for UARTRIS {}
+#[doc = "UART raw interrupt status register"]
+pub mod uartris;
+#[doc = "UART masked interrupt status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartmis](uartmis) module"]
+pub type UARTMIS = crate::Reg<u32, _UARTMIS>;
 #[allow(missing_docs)]
 #[doc(hidden)]
-pub struct _MIS;
-#[doc = "`read()` method returns [mis::R](mis::R) reader structure"]
-impl crate::Readable for MIS {}
-#[doc = "`write(|w| ..)` method takes [mis::W](mis::W) writer structure"]
-impl crate::Writable for MIS {}
-#[doc = "MIS"]
-pub mod mis;
-#[doc = "ICR\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [icr](icr) module"]
-pub type ICR = crate::Reg<u32, _ICR>;
+pub struct _UARTMIS;
+#[doc = "`read()` method returns [uartmis::R](uartmis::R) reader structure"]
+impl crate::Readable for UARTMIS {}
+#[doc = "`write(|w| ..)` method takes [uartmis::W](uartmis::W) writer structure"]
+impl crate::Writable for UARTMIS {}
+#[doc = "UART masked interrupt status register"]
+pub mod uartmis;
+#[doc = "UART interrupt clear register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uarticr](uarticr) module"]
+pub type UARTICR = crate::Reg<u32, _UARTICR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
-pub struct _ICR;
-#[doc = "`read()` method returns [icr::R](icr::R) reader structure"]
-impl crate::Readable for ICR {}
-#[doc = "`write(|w| ..)` method takes [icr::W](icr::W) writer structure"]
-impl crate::Writable for ICR {}
-#[doc = "ICR"]
-pub mod icr;
-#[doc = "DMACTL\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dmactl](dmactl) module"]
-pub type DMACTL = crate::Reg<u32, _DMACTL>;
+pub struct _UARTICR;
+#[doc = "`read()` method returns [uarticr::R](uarticr::R) reader structure"]
+impl crate::Readable for UARTICR {}
+#[doc = "`write(|w| ..)` method takes [uarticr::W](uarticr::W) writer structure"]
+impl crate::Writable for UARTICR {}
+#[doc = "UART interrupt clear register"]
+pub mod uarticr;
+#[doc = "UART DMA control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartdmactl](uartdmactl) module"]
+pub type UARTDMACTL = crate::Reg<u32, _UARTDMACTL>;
 #[allow(missing_docs)]
 #[doc(hidden)]
-pub struct _DMACTL;
-#[doc = "`read()` method returns [dmactl::R](dmactl::R) reader structure"]
-impl crate::Readable for DMACTL {}
-#[doc = "`write(|w| ..)` method takes [dmactl::W](dmactl::W) writer structure"]
-impl crate::Writable for DMACTL {}
-#[doc = "DMACTL"]
-pub mod dmactl;
-#[doc = "LCTL\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lctl](lctl) module"]
-pub type LCTL = crate::Reg<u32, _LCTL>;
+pub struct _UARTDMACTL;
+#[doc = "`read()` method returns [uartdmactl::R](uartdmactl::R) reader structure"]
+impl crate::Readable for UARTDMACTL {}
+#[doc = "`write(|w| ..)` method takes [uartdmactl::W](uartdmactl::W) writer structure"]
+impl crate::Writable for UARTDMACTL {}
+#[doc = "UART DMA control register"]
+pub mod uartdmactl;
+#[doc = "UARTLCTL\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartlctl](uartlctl) module"]
+pub type UARTLCTL = crate::Reg<u32, _UARTLCTL>;
 #[allow(missing_docs)]
 #[doc(hidden)]
-pub struct _LCTL;
-#[doc = "`read()` method returns [lctl::R](lctl::R) reader structure"]
-impl crate::Readable for LCTL {}
-#[doc = "`write(|w| ..)` method takes [lctl::W](lctl::W) writer structure"]
-impl crate::Writable for LCTL {}
-#[doc = "LCTL"]
-pub mod lctl;
-#[doc = "LSS\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lss](lss) module"]
-pub type LSS = crate::Reg<u32, _LSS>;
+pub struct _UARTLCTL;
+#[doc = "`read()` method returns [uartlctl::R](uartlctl::R) reader structure"]
+impl crate::Readable for UARTLCTL {}
+#[doc = "`write(|w| ..)` method takes [uartlctl::W](uartlctl::W) writer structure"]
+impl crate::Writable for UARTLCTL {}
+#[doc = "UARTLCTL"]
+pub mod uartlctl;
+#[doc = "UARTLSS\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartlss](uartlss) module"]
+pub type UARTLSS = crate::Reg<u32, _UARTLSS>;
 #[allow(missing_docs)]
 #[doc(hidden)]
-pub struct _LSS;
-#[doc = "`read()` method returns [lss::R](lss::R) reader structure"]
-impl crate::Readable for LSS {}
-#[doc = "`write(|w| ..)` method takes [lss::W](lss::W) writer structure"]
-impl crate::Writable for LSS {}
-#[doc = "LSS"]
-pub mod lss;
-#[doc = "LTIM\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ltim](ltim) module"]
-pub type LTIM = crate::Reg<u32, _LTIM>;
+pub struct _UARTLSS;
+#[doc = "`read()` method returns [uartlss::R](uartlss::R) reader structure"]
+impl crate::Readable for UARTLSS {}
+#[doc = "`write(|w| ..)` method takes [uartlss::W](uartlss::W) writer structure"]
+impl crate::Writable for UARTLSS {}
+#[doc = "UARTLSS"]
+pub mod uartlss;
+#[doc = "UARTLTIM\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartltim](uartltim) module"]
+pub type UARTLTIM = crate::Reg<u32, _UARTLTIM>;
 #[allow(missing_docs)]
 #[doc(hidden)]
-pub struct _LTIM;
-#[doc = "`read()` method returns [ltim::R](ltim::R) reader structure"]
-impl crate::Readable for LTIM {}
-#[doc = "`write(|w| ..)` method takes [ltim::W](ltim::W) writer structure"]
-impl crate::Writable for LTIM {}
-#[doc = "LTIM"]
-pub mod ltim;
+pub struct _UARTLTIM;
+#[doc = "`read()` method returns [uartltim::R](uartltim::R) reader structure"]
+impl crate::Readable for UARTLTIM {}
+#[doc = "`write(|w| ..)` method takes [uartltim::W](uartltim::W) writer structure"]
+impl crate::Writable for UARTLTIM {}
+#[doc = "UARTLTIM"]
+pub mod uartltim;
 #[doc = "UART_9BITADDR\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uart_9bitaddr](uart_9bitaddr) module"]
 pub type UART_9BITADDR = crate::Reg<u32, _UART_9BITADDR>;
 #[allow(missing_docs)]
@@ -259,25 +259,25 @@ impl crate::Readable for UART_9BITAMASK {}
 impl crate::Writable for UART_9BITAMASK {}
 #[doc = "UART_9BITAMASK"]
 pub mod uart_9bitamask;
-#[doc = "PP\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pp](pp) module"]
-pub type PP = crate::Reg<u32, _PP>;
+#[doc = "UARTPP\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartpp](uartpp) module"]
+pub type UARTPP = crate::Reg<u32, _UARTPP>;
 #[allow(missing_docs)]
 #[doc(hidden)]
-pub struct _PP;
-#[doc = "`read()` method returns [pp::R](pp::R) reader structure"]
-impl crate::Readable for PP {}
-#[doc = "`write(|w| ..)` method takes [pp::W](pp::W) writer structure"]
-impl crate::Writable for PP {}
-#[doc = "PP"]
-pub mod pp;
-#[doc = "CC\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc](cc) module"]
-pub type CC = crate::Reg<u32, _CC>;
+pub struct _UARTPP;
+#[doc = "`read()` method returns [uartpp::R](uartpp::R) reader structure"]
+impl crate::Readable for UARTPP {}
+#[doc = "`write(|w| ..)` method takes [uartpp::W](uartpp::W) writer structure"]
+impl crate::Writable for UARTPP {}
+#[doc = "UARTPP"]
+pub mod uartpp;
+#[doc = "UARTCC\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartcc](uartcc) module"]
+pub type UARTCC = crate::Reg<u32, _UARTCC>;
 #[allow(missing_docs)]
 #[doc(hidden)]
-pub struct _CC;
-#[doc = "`read()` method returns [cc::R](cc::R) reader structure"]
-impl crate::Readable for CC {}
-#[doc = "`write(|w| ..)` method takes [cc::W](cc::W) writer structure"]
-impl crate::Writable for CC {}
-#[doc = "CC"]
-pub mod cc;
+pub struct _UARTCC;
+#[doc = "`read()` method returns [uartcc::R](uartcc::R) reader structure"]
+impl crate::Readable for UARTCC {}
+#[doc = "`write(|w| ..)` method takes [uartcc::W](uartcc::W) writer structure"]
+impl crate::Writable for UARTCC {}
+#[doc = "UARTCC"]
+pub mod uartcc;

@@ -10,5 +10,31 @@ impl crate::ResetValue for super::CH4_FIFO_LVL {
         0
     }
 }
-impl R {}
-impl W {}
+#[doc = "Reader of field `ADC_CHANNEL4_FIFO_LVL`"]
+pub type ADC_CHANNEL4_FIFO_LVL_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `ADC_CHANNEL4_FIFO_LVL`"]
+pub struct ADC_CHANNEL4_FIFO_LVL_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> ADC_CHANNEL4_FIFO_LVL_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !0x07) | ((value as u32) & 0x07);
+        self.w
+    }
+}
+impl R {
+    #[doc = "Bits 0:2 - This register shows the current FIFO level. FIFO is 4 words wide. Possible supported levels are : 0x0 to 0x4."]
+    #[inline(always)]
+    pub fn adc_channel4_fifo_lvl(&self) -> ADC_CHANNEL4_FIFO_LVL_R {
+        ADC_CHANNEL4_FIFO_LVL_R::new((self.bits & 0x07) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:2 - This register shows the current FIFO level. FIFO is 4 words wide. Possible supported levels are : 0x0 to 0x4."]
+    #[inline(always)]
+    pub fn adc_channel4_fifo_lvl(&mut self) -> ADC_CHANNEL4_FIFO_LVL_W {
+        ADC_CHANNEL4_FIFO_LVL_W { w: self }
+    }
+}
